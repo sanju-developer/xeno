@@ -3,11 +3,11 @@ export const getParseTime = (date) => {
 }
 
 export const getDateBasedText = date => {
-    return new Date(date).getDate() == new Date().getDate() ? 'Today' : new Date().getDate() - new Date(date).getDate() == 1 ? 'Tommorrow' : getDayText(date)
+    return new Date(date).getDate() === new Date().getDate() ? 'Today' : new Date().getDate() - new Date(date).getDate() === 1 ? 'Tommorrow' : getDayText(date)
 }
 
 export const getColor = date => {
-    return new Date(date).getDate() == new Date().getDate() ? 'green' : new Date().getDate() - new Date(date).getDate() == 1 ? 'yellow' : 'red'
+    return new Date(date).getDate() === new Date().getDate() ? 'green' : new Date().getDate() - new Date(date).getDate() === 1 ? 'yellow' : 'red'
 }
 
 export const getDayText = date => {
@@ -27,16 +27,17 @@ export const getDayText = date => {
             return 'Friday'
         case 6:
             return 'Saturday'
+        default: return ''
     }
 }
 
 export const getDateWithSuffix = (date) => {
     const dateCount = new Date(date).getDate()
-    if (dateCount == 1) {
+    if (dateCount === 1) {
         return '1st'
-    } else if (dateCount == 2) {
+    } else if (dateCount === 2) {
         return '2nd'
-    } else if (dateCount == 3) {
+    } else if (dateCount === 3) {
         return '3rd'
     } else return dateCount + 'th'
 }

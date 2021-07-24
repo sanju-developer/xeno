@@ -78,9 +78,9 @@ function Dashboard() {
                         <Searchbar isRounded={true} onSearchHandler={onSearchHandler} />
                     </div>
                     <div className="card-section">
-                        {todos.length != 0 ? <TodoCard selectedItem={selectedItem} todos={search.length != 0 ? filteredTodos : todos} markCompleteHandler={markCompleteHandler} dropdownHandler={dropdownHandler} /> : <p className="mt-5">No To Do Found.</p>}
-                        {completedTodos.length != 0 && <div className="divider dark-grey w-100 mt-5 mb-5" />}
-                        {completedTodos.length != 0 && <CompletedCard todos={completedTodos} />}
+                        {todos.length !== 0 ? <TodoCard selectedItem={selectedItem} todos={search.length !== 0 ? filteredTodos : todos} markCompleteHandler={markCompleteHandler} dropdownHandler={dropdownHandler} /> : <p className="mt-5">No To Do Found.</p>}
+                        {completedTodos.length !== 0 && <div className="divider dark-grey w-100 mt-5 mb-5" />}
+                        {completedTodos.length !== 0 && <CompletedCard todos={completedTodos} />}
                     </div>
                 </div>
             </div>

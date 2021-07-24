@@ -7,7 +7,7 @@ function AddTodo(props) {
 
     const submit = () => {
         for (var key in todoForm) {
-            if (todoForm[key] !== null && todoForm[key] != "") {
+            if (todoForm[key] !== null && todoForm[key] !== "") {
                 setError('')
             } else return setError('Please fill the form')
         }
@@ -40,7 +40,7 @@ function AddTodo(props) {
             </Modal.Body>
             <Modal.Footer className="justify-content-center">
                 <Button variant="secondary" onClick={onHide}>Cancel</Button>
-                <Button variant="primary" onClick={submit}>Save</Button>
+                <Button className="my-primary" onClick={submit}>Save</Button>
             </Modal.Footer>
         </Modal>
     );
