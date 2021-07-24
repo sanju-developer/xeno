@@ -1,0 +1,23 @@
+.left-portion{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    .input-group-text{
+        border: none;
+        background: none;
+    }
+}
+.right-portion{
+    .space-with-dot{
+        padding-left: 10px;
+    }
+    .card-heading{
+        color: #4A5058;
+    }
+    .card-description{
+        color: #A6A6A6;
+        .time{
+            color: #BDBDBD;
+        }
+    }
+}
